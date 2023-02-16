@@ -57,8 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scrypts\CarAdditions.cs" />
-    <Compile Include="Assets\Scrypts\Car.cs" />
     <Compile Include="Assets\Scrypts\MenusManager.cs" />
+    <Compile Include="Assets\Scrypts\Car.cs" />
+    <Compile Include="Assets\Scrypts\CarManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

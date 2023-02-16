@@ -351,6 +351,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scrypts/Car.cs"
 "Assets/Scrypts/CarAdditions.cs"
+"Assets/Scrypts/CarManager.cs"
 "Assets/Scrypts/MenusManager.cs"
 -langversion:9.0
 
