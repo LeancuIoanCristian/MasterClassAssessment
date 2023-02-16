@@ -15,33 +15,39 @@ public class Car : MonoBehaviour
 
     //car price
     public float car_price;
-    float price_vessel;
+    float price_initial;
 
     //additions
-    public List<CarAdditions> car_add_ons;
-
+    public List<CarAdditions> car_add_ons = new List<CarAdditions>();
+    public CarAdditions car_heated_seats;
+    public CarAdditions car_heated_mirrors;
+    public CarAdditions car_power_engine;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        price_vessel = car_price;
+        
+        car_add_ons.Add(car_heated_seats);
+        car_add_ons.Add(car_heated_mirrors);
+        car_add_ons.Add(car_power_engine);
     }
+    
 
     public float FinalPrice()
     {
-        float tempPrice = price_vessel;
-
-        if(car_add_ons.Count > 0)
+        float temp_collection = 0;
+       
+        for (int index = 0; index < car_add_ons.Count; index++)
         {
-            for (int index = 0; index < car_add_ons.Count; index++)
+            if (car_add_ons[index].active)
             {
-                car_price += tempPrice / 10;
+                temp_collection += car_add_ons[index].equipment_price;
             }
         }
-        
-
-        return car_price;
+        return car_price + temp_collection;
     }
+
+    
 }
